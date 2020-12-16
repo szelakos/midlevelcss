@@ -1,3 +1,11 @@
+(function ($) {
+	"use strict";
+	$(document).ready(function() {  
+
+
+
+
+
   /*------------------------------------*\
     #Initialize Swiper
   \*------------------------------------*/
@@ -39,3 +47,10 @@
 
 $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
+
+
+
+
+
+  });
+}(jQuery));	

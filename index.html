@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mid Level css</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link href="css/normalize.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/layout.css" rel="stylesheet" type="text/css" />
-    <link href="css/base.css" rel="stylesheet" type="text/css" />
-    <link href="css/components.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"
+        type="text/css">
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+    <link href="css/normalize.min.css" rel="stylesheet" type="text/css">
+    <link href="css/layout.css" rel="stylesheet" type="text/css">
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/components.css" rel="stylesheet" type="text/css">
 </head>
 
 <body class="bg-dark">
@@ -23,15 +24,28 @@
                     <img style="width: 160px;" src="img/logo-wht.png" alt="">
                 </a>
             </div>
-            <div class="nav-menu">
+            <div class="nav-menu m-hide">
                 <ul class="menu">
-                    <li class="menu-item">Courses</li>
-                    <li class="menu-item">Prices</li>
-                    <li class="menu-item">Contact</li>
+                    <li class="menu-item"><a href="#courses">Courses</a></li>
+                    <li class="menu-item"><a href="#about">About</a></li>
+                    <li class="menu-item"><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!--Mobile Menu-->
+    <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+            <li class="menu-item"><a href="#courses">Courses</a></li>
+            <li class="menu-item"><a href="#about">About</a></li>
+            <li class="menu-item"><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
 
     <!--Header-->
     <header class="full d-flex align-items-center">
@@ -42,8 +56,8 @@
                     suscipit ante laoreet vel. Fusce facilisis est ac tristique fermentum. Proin conva.</p>
                 <a class="btn btn-green" href="">Read more</a>
             </div>
-            <div class="col-2">
-                <img style="width: 100%; height: 100%;" src="img/codes.png" alt="codes"  data-parallax='{"y" : -100}'>
+            <div class="col-2 m-hide">
+                <img style="width: 100%; height: 100%;" src="img/codes.png" alt="codes" data-parallax='{"y" : -100}'>
             </div>
         </div>
     </header>
@@ -51,7 +65,7 @@
     <!--Main-->
     <main>
 
-        <section>
+        <section id="courses">
             <!-- Swiper -->
             <div class="swiper-container fadeIn">
                 <div class="swiper-wrapper">
@@ -144,16 +158,16 @@
         </section>
 
         <!-- 2 col right img -->
-        <section>
+        <section id="about">
             <div class="img-text container d-flex">
-                <div class="col-2 pr-5  moveUp fadeIn">
+                <div class="col-2 pr-5 mb-5 moveUp fadeIn">
                     <h1>Future-proof knowledge</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum imperdiet risus, eu
                         suscipit ante laoreet vel.</p>
                     <a class="btn btn-green" href="">Read more</a>
                 </div>
                 <div class="col-2" data-parallax='{"y" : -100}'>
-                    <img class="box-shadow-light" style="width: 100%; height: 100%;"
+                    <img class="box-shadow" style="width: 100%; height: 100%;"
                         src="https://images.unsplash.com/photo-1472437774355-71ab6752b434?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80"
                         alt="book">
                 </div>
@@ -164,11 +178,11 @@
         <section>
             <div class="img-text-right container d-flex">
                 <div class="col-2 pr-5">
-                    <img class="box-shadow-light" style="width: 100%; height: 100%;"
+                    <img class="box-shadow" style="width: 100%; height: 100%;"
                         src="https://images.unsplash.com/photo-1468070454955-c5b6932bd08d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                        alt="code"  data-parallax='{"y" : -100}'>
+                        alt="code" data-parallax='{"y" : -100}'>
                 </div>
-                <div class="col-2  moveUp fadeIn">
+                <div class="col-2 mb-5 moveUp fadeIn">
                     <h1>Helpful community</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum imperdiet risus, eu
                         suscipit ante laoreet vel.</p>
@@ -179,7 +193,7 @@
 
         <!--CTA-->
         <section>
-            <div class="container cta  moveUp fadeIn">
+            <div class="container cta mb-5 moveUp fadeIn">
                 <div class="col">
                     <h2>Get involved in learning today!</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum imperdiet risus, eu
@@ -193,7 +207,7 @@
     </main>
 
     <!--Footer-->
-    <footer>
+    <footer id="contact">
         <div class="container d-flex justify-content-center fadeIn">
             <div class="col-4 relative">
                 <img style="width: 160px;" src="img/logo-wht.png" alt="">
@@ -219,7 +233,7 @@
                     <li><a href="">Some pretty link</a></li>
                 </ul>
             </div>
-            <div class="col-4">
+            <div class="col-4 m-hide">
                 <h3>Title</h3>
                 <ul>
                     <li><a href="">Some pretty link</a></li>
@@ -229,7 +243,7 @@
                     <li><a href="">Some pretty link</a></li>
                 </ul>
             </div>
-            <div class="col-4">
+            <div class="col-4 m-hide">
                 <h3>Title</h3>
                 <ul>
                     <li><a href="">Some pretty link</a></li>

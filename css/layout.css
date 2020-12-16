@@ -1,14 +1,13 @@
 /**
  * CONTENTS
  *
- * SETTINGS
- * Variables............Globally-available variables.
- * Box-sizing...........Better default `box-sizing`.
- * Margins..............Top and bottom margins global values.
- *
- * BASE STYLES
- * Headings.............H1-H2 styles.
- * Base font............Base font style.
+ * CONTAINER
+ * COLUMNS
+ * NAV
+ * SECTIONS
+ * CTA
+ * FOOTER
+ * MEDIA QUERIES
  *
  */
 
@@ -70,7 +69,7 @@
     width: 100%;
     padding: 20px 0;
     background-color: var(--bg-secondary);
-    z-index: 1;
+    z-index: 2;
   }
 
   .logo {
@@ -166,4 +165,193 @@
   .copyright {
     text-align: center;
     padding: 25px;
+  }
+
+
+
+
+
+  /*------------------------------------*\
+    #MEDIA QUERIES
+  \*------------------------------------*/
+
+  @media (max-width: 767px) {
+
+    html {
+      font-size: calc(14px + 4 * ((100vw - 575px) / 767));
+    }
+
+    section {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .container {
+      padding-right: 15px;
+      padding-left: 15px;
+      flex-direction: column;
+    }
+
+    .col, .col-2, .col-3, .col-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .m-hide {
+      display: none;
+    }
+
+    .mb-5 {
+      margin-bottom: 5rem;
+    }
+
+    .img-text, .img-text-right {
+      width: 100% !important;
+    }
+
+    .img-text-right.container {
+      flex-direction: column-reverse;
+    }
+
+    .cta p {
+      width: 100%;
+    }
+
+    footer {
+      text-align: center;
+    }
+
+    .social-icons {
+      bottom: -316px;
+      left: 120px;
+    }
+
+    #menuToggle {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      z-index: 3;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    
+    #menuToggle input {
+      display: flex;
+      width: 40px;
+      height: 32px;
+      position: absolute;
+      cursor: pointer;
+      opacity: 0;
+      z-index: 3;
+    }
+    
+    #menuToggle span {
+      display: flex;
+      width: 29px;
+      height: 2px;
+      margin-bottom: 5px;
+      position: relative;
+      background: #ffffff;
+      border-radius: 3px;
+      z-index: 3;
+      transform-origin: 5px 0px;
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                  background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                  opacity 0.55s ease;
+    }
+    
+    #menuToggle span:first-child {
+      transform-origin: 0% 0%;
+    }
+    
+    #menuToggle span:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+    
+    #menuToggle input:checked ~ span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-3px, -1px);
+      background: var(--bg-primary);
+    }
+
+    #menuToggle input:checked ~ span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+    
+    #menuToggle input:checked ~ span:nth-last-child(2) {
+      transform: rotate(-45deg) translate(0, -1px);
+    }
+    
+    #menu {
+      position: absolute;
+      width: 50vh;
+      height: 110vh;
+      box-shadow: 0 4px 10px 0 rgba(0,0,0,0.5);
+      margin: -50px 0 0 -190px;
+      padding: 50px;
+      padding-top: 125px;
+      background-color: var(--bg-green);
+      -webkit-font-smoothing: antialiased;
+      transform-origin: 0% 0%;
+      transform: translate(100%, 0);
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+    
+    #menu li {
+      padding: 10px 0;
+      transition-delay: 2s;
+    }
+    
+    #menuToggle input:checked ~ ul {
+      transform: none;
+    }
+
+    .menu-item {
+      display: block;
+    }
+  
+  }
+    
+  
+  
+
+
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) and (max-width: 991px) {
+  
+    #menuToggle {
+      display: none;
+    }
+  
+  }
+  
+  
+  
+
+
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) and (max-width: 1199px) {
+  
+    #menuToggle {
+      display: none;
+    }
+
+  }
+  
+  
+  
+
+
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) and (max-width: 1800px) {
+  
+    #menuToggle {
+      display: none;
+    }
+  
   }

@@ -13,14 +13,14 @@
 /**
  * CONTENTS
  *
- * SETTINGS
- * Variables............Globally-available variables.
- * Box-sizing...........Better default `box-sizing`.
- * Margins..............Top and bottom margins global values.
- *
- * BASE STYLES
- * Headings.............H1-H2 styles.
- * Base font............Base font style.
+ * VARIABLES
+ * BOX-SIZING
+ * OVERFLOW
+ * PADDING
+ * TYPOGRAPHY
+ * HTML
+ * COLOR SYSTEM
+ * IMGAES
  *
  */
 
@@ -38,8 +38,6 @@
     --bg-hover:             #85d049;;
     --primary-font-color:   #000;
     --secondary-font-color: #fff;
-    --btn-main-color:       #;
-    --btn-secondary-color:  #;
   }
   
   
@@ -50,9 +48,7 @@
     #BOX-SIZING
   \*------------------------------------*/
   
-  * {
-    box-sizing: border-box;
-  }
+  * { box-sizing: border-box; }
   
   
   
@@ -62,21 +58,17 @@
     #OVERFLOW
   \*------------------------------------*/
   
-  html {
-    overflow-x: hidden;
-  }
+  html { overflow-x: hidden; }
   
   
   
   
   
   /*------------------------------------*\
-    #PADDING & MARGINS
+    #PADDING
   \*------------------------------------*/
   
-  .pr-5 {
-    padding-right: 5%;
-  }
+  .pr-5 { padding-right: 5%; }
 
   
   
@@ -87,53 +79,53 @@
   \*------------------------------------*/
     
   h1, .h1 {
-    font-size: calc(2.45rem + 1.4vw);
-    line-height: calc(3.3rem + 1.4vw);
-    letter-spacing: -0.115rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
+    font-size:        calc(2.45rem + 1.4vw);
+    line-height:      calc(3.3rem + 1.4vw);
+    letter-spacing:   -0.115rem;
+    font-weight:      700;
+    margin-bottom:    2rem;
   }
   
   h2, .h2 {
-    font-size: calc(1.55rem + 1.1vw);
-    line-height: calc(3rem + 0.5vw);
-    letter-spacing: normal;
-    font-weight: 700;
+    font-size:        calc(1.55rem + 1.1vw);
+    line-height:      calc(3rem + 0.5vw);
+    letter-spacing:   normal;
+    font-weight:      700;
   }
   
   h3, .h3 {
-    font-size: calc(0.92rem + 0.3vw);
-    line-height: calc(1.5rem + 0.3vw);
-    letter-spacing: normal;
-    font-weight: 600;
-    margin-bottom: 2rem;
+    font-size:        calc(0.92rem + 0.3vw);
+    line-height:      calc(1.5rem + 0.3vw);
+    letter-spacing:   normal;
+    font-weight:      600;
+    margin-bottom:    2rem;
   }
   
   h4, .h4 {
-    font-size: calc(0.65rem + 0.1vw);
-    line-height: calc(1.3rem + 0.1vw);
-    letter-spacing: normal;
-    font-weight: 500;
+    font-size:       calc(0.65rem + 0.1vw);
+    line-height:     calc(1.3rem + 0.1vw);
+    letter-spacing:  normal;
+    font-weight:     500;
   }
   
   
   body, p, .p {
-    font-size: calc(1.2rem + 0.3vw);
-    line-height: calc(2.4rem + 0.3vw);
-    font-weight: normal;
+    font-size:       calc(1.2rem + 0.3vw);
+    line-height:     calc(2.4rem + 0.3vw);
+    font-weight:     normal;
   }
 
   .small, p .small, small, .small p {
-    font-size: calc(0.9rem + 0.1vw);
-    line-height: calc(1.8rem + 0.1vw);
-    font-weight: normal;
+    font-size:       calc(0.9rem + 0.1vw);
+    line-height:     calc(1.8rem + 0.1vw);
+    font-weight:     normal;
   }
   
   .large-title {
-    font-size: calc(2.65rem + 2.4vw);
-    line-height: calc(3rem + 2.4vw);
-    letter-spacing: -0.325rem;
-    font-weight: bold;
+    font-size:       calc(2.65rem + 2.4vw);
+    line-height:     calc(3rem + 2.4vw);
+    letter-spacing:  -0.325rem;
+    font-weight:     bold;
   }
   
   
@@ -141,13 +133,14 @@
   
 
   /*------------------------------------*\
-    #BASE FONT
+    #HTML
   \*------------------------------------*/
   
   html {
-    font-size:   100%;
-    font-family: 'Montserrat', sans-serif;;
-    color:       var(--secondary-font-color);
+    font-size:        100%;
+    font-family:      'Montserrat', sans-serif;;
+    color:            var(--secondary-font-color);
+    scroll-behavior:  smooth;
   }
 
 
@@ -158,21 +151,13 @@
     #COLOR SYSTEM
   \*------------------------------------*/
 
-  .light {
-    color: var(--secondary-font-color);
-  }
+  .light { color: var(--secondary-font-color); }
 
-  .dark {
-    color: var(--primary-font-color);
-  }
+  .dark { color: var(--primary-font-color); }
 
-  .bg-light {
-    background-color: var(--bg-primary);
-  }
+  .bg-light { background-color: var(--bg-primary); }
 
-  .bg-dark {
-    background-color: var(--bg-secondary);
-  }
+  .bg-dark { background-color: var(--bg-secondary); }
 
 
 
@@ -182,6 +167,4 @@
     #IMGAES
   \*------------------------------------*/
 
-  img {
-    border-radius: 4px;
-  }
+  img { border-radius: 4px; }
