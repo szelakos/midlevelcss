@@ -1,0 +1,169 @@
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Variables............Globally-available variables.
+ * Box-sizing...........Better default `box-sizing`.
+ * Margins..............Top and bottom margins global values.
+ *
+ * BASE STYLES
+ * Headings.............H1-H2 styles.
+ * Base font............Base font style.
+ *
+ */
+
+
+
+
+
+  /*------------------------------------*\
+    #CONTAINER
+  \*------------------------------------*/
+
+ .container {
+	max-width: 1800px;
+	padding-right: 40px;
+  padding-left: 40px;
+  flex-direction: row;
+}
+
+
+
+
+
+  /*------------------------------------*\
+    #COLUMNS
+  \*------------------------------------*/
+
+  .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .col-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .col-3 {
+    flex: 0 0 33.3%;
+    max-width: 33.3%;
+  }
+
+  .col-4 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+
+
+
+
+  /*------------------------------------*\
+    #NAV
+  \*------------------------------------*/
+
+  nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: var(--bg-secondary);
+    z-index: 1;
+  }
+
+  .logo {
+    float: left;
+    margin-top: 5px;
+  }
+
+  .nav-menu {
+    float: right;
+  }
+
+  .menu {
+    margin: auto;
+  }
+
+  .menu-item {
+    display: inline;
+    margin: auto 15px;
+    list-style: none;
+    font-weight: bold;
+    font-size: small;
+    text-transform: uppercase;
+  }
+
+
+
+
+
+  /*------------------------------------*\
+    #SECTIONS
+  \*------------------------------------*/
+
+  section {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  section:first-child {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding-top: 0;
+    padding-bottom: 5rem;
+  }
+
+
+
+
+
+  /*------------------------------------*\
+    #CTA
+  \*------------------------------------*/
+
+  .cta {
+    text-align: center;
+  }
+
+  .cta p {
+    width: 65%;
+    margin: 0 auto 25px;
+  }
+  
+
+
+
+
+  /*------------------------------------*\
+    #FOOTER
+  \*------------------------------------*/
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--secondary-font-color);
+  }
+
+  a:hover {
+    color: var(--bg-green);
+  }
+
+  .social-icons {
+    bottom: 25px;
+  }
+
+  .copyright {
+    text-align: center;
+    padding: 25px;
+  }
